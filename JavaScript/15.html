@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<style>
+    table{
+	    width:300px;
+		height:300px;
+		border:0;
+		border-collapse:collapse;
+		background:gray;
+	}
+	td{
+	    border:1px solid black;
+	}
+</style>
+<body>
+    <h1>重点：事件委托</h1>
+	<table>
+	    <tr><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td></td><td></td><td></td><td></td><td></td></tr>
+	</table>
+</body>
+<script>
+    var num=0;
+	document.getElementsByTagName('table')[0].onclick=function (ev){
+	    ev.target.style.background=(num++)%2?"black":"white";
+	};//精简版
+	
+	//var tds=document.getElementsByTagName('td');
+	//var i=0;
+	//while(i<tds.length){
+	//    tds[i].onclick=function (ev){
+	//        this.style.background="white";
+	//	}
+	//	i++;
+	//}复杂版
+</script>
+</html>

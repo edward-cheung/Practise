@@ -1,0 +1,39 @@
+<html>
+<script>
+    var $='jquery';
+	//alert($);//JS的变量名可以用数字、字母、$组成，且数字不能开头，区分大小写
+	        //声明时不用var，会污染全局变量
+			
+	var a=true;
+	var b=null;//用于对象类型
+	var c=undefined;//用于原生数据类型
+	
+	var p={name:'lisi',age:29};
+    console.log(p.name);
+    var arr=['a',3,'hello',true];//键值由0开始，依次递增
+    console.log(arr);
+	console.log(arr[2]);//区别PHP数组的声明和访问方式
+	
+	console.log(1+6+'hello'+3+2);//左往右加时，碰到第一个非数值类型之后，就理解为字符串拼接
+	
+	var $a=0;
+	var $b=9;
+	console.log($a||$b);
+	console.log($a&&$b);//逻辑运算的值是能确定运算的结果的单元的值
+	
+	var arr=['赵','钱','孙','李'];
+	for(var i=0;i<arr.length;i++){
+	    console.log(arr[i]);
+	}
+	var obj={name:'lisi',age:29,area:'bj'};
+	for(var k in obj){
+	    console.log(k+'~'+obj[k]);
+		//区别于obj.k、obj['k']
+	}
+</script>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+</body><!-- //由于script按引入顺序，逐段执行，故js代码通常写在最后 -->
+</html>

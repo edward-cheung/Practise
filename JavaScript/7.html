@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<style>
+    .test1{
+		background:green;
+	}
+	.test2{
+		background:red;
+	}
+</style>
+<script>
+    function ch(){
+	    var div=document.getElementsByTagName("div")[0];
+		if(div.className.indexOf("test1")<0){
+		    div.className="test1";
+		}else{
+		    div.className="test2";
+		}
+		div.style.width=parseInt(div.style.width)+5+'px';
+		div.style.height=parseInt(div.style.height)+5+'px';
+		div.style.borderTop=parseInt(div.style.borderTopwidth)+1+'px';//parseInt函数：把字符串中的数字分析出来并转换成整型
+	}
+	//普通属性通过 对象.标签属性 来访问，但操作class属性用 对象.className
+	//CSS属性通过 对象.style.属性 来访问,但如果CSS属性带有横线，则把横线去除并把横线后的第一个字母大写
+	//此方法只能取得内联style的值
+</script>
+<body>
+    <h1>操作对象的属性</h1>
+    <div class="test1" onclick="ch();" style="width:300px;height:300px;border-top:1px solid yellow;">
+	    点击div，使其背景色红绿交替<br>
+		高和宽增加5px<br>
+		下边框增加1px<br>
+	</div>
+</body>
+</html>

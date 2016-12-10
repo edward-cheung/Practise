@@ -1,0 +1,25 @@
+<html>
+<script>
+    var str='hello world';
+	console.log(str.length);
+	console.log(str.substr(2,5));
+	var arr=['春','夏','秋','冬'];
+    console.log(arr.join(','));
+	var str='东,南,西,北';
+	console.log(str.split(','));
+	
+	var str='hello world';
+	console.log(str.indexOf('he')>=0?'find':'not find');//返回找到该字段的位置，未找到返回-1
+	
+	var dt=new Date();
+	console.log(dt.getFullYear());
+	
+	console.log(Math.ceil(2.3));//大于或等于该数的最小整数
+	console.log(Math.floor(2.3));//小于或等于该数的最大整数
+	console.log(Math.random());//返回随机数[0,1]
+	console.log(Math.random()*5+5);//返回随机数[5,10]
+</script>
+<head>
+    <meta charset="utf-8">
+</head>
+</html>

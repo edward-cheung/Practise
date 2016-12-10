@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <h1>用正则表达式验证邮箱</h1>
+	<pre>  <input type="button" value="标注邮箱" onclick="find();" /></pre>
+	<ul>
+	    <li>刘备&lt;liubei@zixue.it&gt;</li>
+		<li>关羽&lt;guanyu@qq.com&gt;</li>
+	    <li>张飞&lt;123&gt;</li>
+	</ul>
+</body>
+<script>
+    function find(){
+        var lis=document.getElementsByTagName('li');
+	    var i=0;
+	    var patt=/\w+@\w+(\.com)/;
+	    while (i<lis.length){
+	    	if(patt.exec(lis[i].innerHTML)!=null){
+		        lis[i].style.background="yellow";
+		    }
+		    i++;
+	    }
+    }//用exec函数匹配正则表达式
+</script>
+</html>

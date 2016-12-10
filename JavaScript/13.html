@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<style>
+    div{
+	    width:300px;
+		height:300px;
+		border:3px solid blue;
+	}
+</style>
+<body>
+    <h1>结构、样式、行为相分离</h1>
+	<div>
+	    <p>
+		    <ul>
+			    <li>Welcome</li>
+			</ul>
+		</p>
+	</div>
+</body>
+<script>
+    //function change(){
+	//    document.getElementsByTagName('div')[0].style.border="1px solid red";
+	//}
+	//document.getElementsByTagName('div')[0].onclick=change;复杂版，注意是change，不是change()
+	
+	//document.getElementsByTagName('div')[0].onclick=function (){
+	//    document.getElementsByTagName('div')[0].style.border="1px solid red";
+	//};简化版，声明匿名函数
+	
+	document.getElementsByTagName('div')[0].onclick=function (){
+	    this.style.border="1px solid red";
+	};//精简版，this指针的使用
+</script>
+</html>

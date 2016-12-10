@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<style>
+    .test1{
+		background:green;
+	}
+	.test2{
+		background:red;
+	}
+</style>
+<script>
+    function change(){
+	    var input=document.getElementsByName('name')[0];
+	    var time=parseInt(input.value)-1;
+	    input.value=time;
+	    if(time==0){
+		    document.getElementsByTagName('div')[0].style.width="400px";
+	        document.getElementsByTagName('div')[0].style.height="400px";
+			clearTimeout(clock);
+	    }else{
+		setTimeout('change()',1000);
+		}
+	}
+    var clock=setTimeout('change()',1000);
+</script>
+<body>
+    <h1>使用setTimeout实现每N秒执行一次</h1>
+	<input type="button" name="name" value="3" />
+	<div class="test1" style="width:300px;height:300px;border-top:1px solid yellow;">
+	    点击div，使其背景色红绿交替<br>
+		高和宽增加5px<br>
+		下边框增加1px<br>
+	</div>	
+</body>
+</html>

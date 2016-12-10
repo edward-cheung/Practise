@@ -1,0 +1,24 @@
+<html>
+<script>
+window.str='Union';//全局变量
+
+function f1(){
+    //var str='China';
+	
+	function f2(){
+	    //var str='Japan';
+	    str='Japan';//未加var会污染全局变量
+	    alert(str);
+	}
+    f2();
+}
+f1();
+alert(window.str);
+//JS作用域的特点：首先在函数内部查找变量，找不到则到外层函数查找，逐步找到最外层，
+//                即window对象，并操作window对象的属性
+    
+</script>
+<head>
+    <meta charset="utf-8">
+</head>
+</html>

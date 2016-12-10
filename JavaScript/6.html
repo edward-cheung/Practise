@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1>找到要操作的对象</h1>
+    <div id="test1" >
+	    <p>p1</p>
+	    <p>p2</p>
+	    <p>p3</p>
+	</div>
+	<div class="test2">class test2</div>
+	<input type="text" name="username" id="" value="poly" />
+</body>
+<script>
+    //用id来查询，返回值为“对象”
+	console.log(document.getElementById('test1'));
+
+	//用标签来查询，返回值为“对象的集合”，即使只找到一个，也包装成对象集合返回
+	ps=document.getElementsByTagName('p');
+	ps[1].style.background="green";
+	
+	//对于表单元素，可以用name来查询，返回值可理解为对象集合
+	//alert(document.getElementsByName('username')[0].value);
+	document.getElementsByName('username')[0].value='lucy';
+	
+	//按照类名查找，返回对象集合
+	document.getElementsByClassName('test2')[0].style.background='gray';
+	
+	//找子节点
+	//alert(document.getElementById('test1').childNodes.length);
+	alert(document.getElementById('test1').children.length);
+	//children非标准属性，但兼容很好，不包括空白节点，而childNodes包括空白节点
+	document.getElementsByTagName('p')[2].parentNode.style.border="1px solid green";//查找父节点
+</script>
+</html>

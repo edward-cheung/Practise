@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<style>
+    img{
+	    width:128px;
+		height:71px;
+		position:relative;
+		left:0px;
+		right:0px;
+	}
+</style>
+<body>
+    <pre>
+	    1：事件对象包含事件相关的信息，如鼠标、时间、触发的DOM对象等
+		2：事件对象被系统传递给事件函数的第一个参数
+		3：时间对象的属性在IE/W3C略有不同
+		4：一个重要的事件属性：target，srcElenment（IE低版本），代表事件发生的所在DOM属性
+	</pre>
+    <img src="./pic1214.jpg" alt="" />
+</body>
+<script>
+	document.getElementsByTagName('img')[0].onmouseover=function (ev){
+	    this.style.left=ev.pageX+10+"px";
+	};
+</script>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+</head>
+<body>
+	<pre>
+	    1.用户名为字母及数字6-11位
+	    2.email为正确的email
+	</pre>
+	<form action="">
+	    <p>用户名：<input type="text" name="username" /><p>
+		<p>Email：<input type="text" name="email" /><p>
+		<p><input type="submit" value="提交" />
+	</form>
+</body>
+<script>
+    document.getElementsByTagName('form')[0].onsubmit=function (){
+	    var patt=/^[a-zA-Z0-9]{6,11}$/;
+		if(!patt.test(document.getElementsByName('username')[0].value)){
+		    alert("用户名为字母及数字6-11位");
+		}
+		var patt=/^\w+@\w+(\.com)$/;
+		if(!patt.test(document.getElementsByName('email')[0].value)){
+		    alert("email为正确的email");
+		}
+		return false;
+	}//js中用test函数匹配正则表达式
+</script>
+</html>

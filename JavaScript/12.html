@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<script>
+    function l(){
+	    document.getElementsByTagName("h1")[0].style.border="1px solid blue";
+	}
+    function f(){
+	    document.getElementsByName("username")[0].style.border="1px solid red";
+	}
+	function b(){
+	    document.getElementsByName("username")[0].style.border="";
+	}
+	function m(){
+	    alert("gray");
+	}
+	function s(){
+	    alert("请正确填写")
+		return false;
+	}
+</script>
+<body onload="l();">
+    <h1>常见事件</h1>
+	<div style="width:200px;height:200px;background:gray;" onmouseover="m();" > </div>
+	<form action="12.html" onsubmit="return s();">
+        <p> 用户名：<input type="text" name="username" onfocus="f();" onblur="t2();"/></p>
+	    <p> 密码：<input type="text" name="password" /></p>
+	    <P> <input type="submit" value="提交" /><p>
+	</form>
+	<!-- onclick元素点击时
+		 onfocus元素获得焦点时
+		 onblur元素失去焦点时
+		 onmouseover鼠标移到某元素之上
+		 onsubmit确认按钮被点击
+		 onload一张页面或一幅图像完成加载之后
+		 onchange域的内容被改变时
+	-->
+</body>
+</html>

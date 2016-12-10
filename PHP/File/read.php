@@ -1,0 +1,13 @@
+<?php
+$tid=$_GET['tid'];
+$f=fopen('./msg.txt','r');
+$i=1;
+while(($row=fgetcsv($f))){
+	if($i==$tid){
+		//print_r($row);
+		echo'<h1>',$row[0],'<h1>';
+		echo'<p>',$row[1],'<p>';
+	}
+	$i++;
+}
+?>

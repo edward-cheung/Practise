@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<style>
+    .test1{
+		background:green;
+	}
+	.test2{
+		background:red;
+	}
+</style>
+<script>
+    function change(){
+	    var input=document.getElementsByName('name')[0];
+	    var time=parseInt(input.value)-1;
+	    input.value=time;
+	    if(time==0){
+		    document.getElementsByTagName('div')[0].style.width="400px";
+	        document.getElementsByTagName('div')[0].style.height="400px";
+			//clearTimeout(clock);
+			clearInterval(clock);//清除定时器
+	    }
+	}
+	//var clock=setTimeout('change()',3000);//window.setTimeout('语句',毫秒);指定毫秒后执行一次语句
+	var clock=setInterval('change()',1000);//window.setInterval('语句',毫秒);每经过毫秒后执行语句
+					//定时器不属于JS的知识，是window对象提供的功能
+</script>
+<body>
+    <h1>定时器</h1>
+	<input type="button" name="name" value="3" />
+	<div class="test1" style="width:300px;height:300px;border-top:1px solid yellow;">
+	    点击div，使其背景色红绿交替<br>
+		高和宽增加5px<br>
+		下边框增加1px<br>
+	</div>	
+</body>
+</html>
