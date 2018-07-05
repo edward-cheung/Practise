@@ -9,4 +9,16 @@ def insertSort(arr):
     return arr
 
 
+def insert_sort(arr):
+    for i in range(1, len(arr)):  # 开始时片段[0:1]已排序
+        x = arr[i]
+        j = i
+        while j > 0 and arr[j - 1] > x:
+            arr[j] = arr[j - 1]
+            j -= 1  # 反序逐个后移排序
+        arr[j] = x
+    return arr
+
+
 print(insertSort([1, 5, 2, 6, 9, 3]))
+print(insert_sort([1, 5, 2, 6, 9, 3]))

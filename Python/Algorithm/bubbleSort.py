@@ -11,4 +11,17 @@ def bubbleSort(arr):
     return arr
 
 
+def bubble_sort(arr):
+    for i in range(len(arr)):
+        found = False
+        for j in range(1, len(arr) - i):
+            if arr[j - 1] > arr[j]:
+                arr[j - 1], arr[j] = arr[j], arr[j - 1]
+                found = True
+        if not found:
+            break
+    return arr
+
+
 print(bubbleSort([1, 5, 2, 6, 9, 3]))
+print(bubble_sort([1, 5, 2, 6, 9, 3]))
